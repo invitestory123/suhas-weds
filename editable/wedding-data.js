@@ -21,7 +21,7 @@ window.WEDDING_DATA = {
     title: "The Wedding of Dhanya & Lavin",
     startsAt: "2026-11-15T10:30:00+05:30",
     endsAt: "2026-11-15T15:30:00+05:30",
-    dateLabel: "14 & 15 . 11 . 2026",
+    dateLabel: "15 . 11 . 2026",
     dayLabel: "Saturday & Sunday, 14 & 15 Nov",
     timeLabel: "Wedding Muhurtham at 10:30 AM on 15th",
     dressCode: "Traditional / Festive Indian Attire",

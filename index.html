@@ -47,7 +47,7 @@
         background: rgba(30, 48, 40, 0.88);
         border: 1.5px solid rgba(228, 201, 126, 0.85);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         cursor: pointer;
@@ -119,6 +119,10 @@
         const iconPaused = document.getElementById('music-icon-paused');
         let isStarted = false;
 
+        function showBtn() {
+          btn.style.display = 'flex';
+        }
+
         function updateUI(isPlaying) {
           if (isPlaying) {
             btn.classList.add('playing');
@@ -136,6 +140,7 @@
           audio.play().then(function() {
             isStarted = true;
             updateUI(true);
+            showBtn();
           }).catch(function(e) {
             console.log('Autoplay deferred until user interaction');
           });
@@ -154,8 +159,9 @@
           }
         });
 
-        // Trigger playback on gate open button or any first user interaction
+        // Trigger playback and reveal music button on gate open button or any first user interaction
         document.addEventListener('click', function handler() {
+          showBtn();
           if (!isStarted) {
             tryPlay();
           }

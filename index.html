@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Dhanya &amp; Lavin — Wedding Invitation</title>
+    <meta
+      name="description"
+      content="Dhanya and Lavin cordially invite you to celebrate their wedding on November 14 &amp; 15, 2026 at Cauvery Hall, Madikeri, Karnataka."
+    />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suhas-weds.vercel.app/" />
+    <meta property="og:title" content="Dhanya &amp; Lavin — Wedding Invitation" />
+    <meta
+      property="og:description"
+      content="Dhanya and Lavin cordially invite you to celebrate their wedding on November 14 &amp; 15, 2026 at Cauvery Hall, Madikeri, Karnataka."
+    />
+    <meta property="og:image" content="./external/media.invitestory.in/sage-parchment/og-image.jpg" />
+    <meta property="og:image:alt" content="Dhanya &amp; Lavin Wedding Invitation" />
+    <meta property="og:site_name" content="Dhanya &amp; Lavin Wedding" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://suhas-weds.vercel.app/" />
+    <meta name="twitter:title" content="Dhanya &amp; Lavin — Wedding Invitation" />
+    <meta
+      name="twitter:description"
+      content="Dhanya and Lavin cordially invite you to celebrate their wedding on November 14 &amp; 15, 2026 at Cauvery Hall, Madikeri, Karnataka."
+    />
+    <meta name="twitter:image" content="./external/media.invitestory.in/sage-parchment/og-image.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <script src="./editable/wedding-data.js"></script>
+    <script type="module" crossorigin src="./assets/index-FTKWP6I9.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/styles-DHpdJjWo.css">
+    <style>
+      #music-toggle-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 9999;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: rgba(30, 48, 40, 0.88);
+        border: 1.5px solid rgba(228, 201, 126, 0.85);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        outline: none;
+        transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        padding: 0;
+      }
+      #music-toggle-btn:hover {
+        transform: scale(1.08);
+        background: rgba(40, 64, 53, 0.95);
+        border-color: #f3df9b;
+      }
+      #music-toggle-btn svg {
+        width: 22px;
+        height: 22px;
+        fill: #e4c97e;
+        transition: transform 0.3s ease;
+      }
+      #music-toggle-btn.playing svg {
+        animation: spinMusic 5s linear infinite;
+      }
+      #music-toggle-btn.playing::after {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1px solid rgba(228, 201, 126, 0.45);
+        animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        pointer-events: none;
+      }
+      @keyframes spinMusic {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulseRing {
+        0% { transform: scale(0.95); opacity: 0.8; }
+        50% { transform: scale(1.18); opacity: 0; }
+        100% { transform: scale(1.18); opacity: 0; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <audio id="wedding-music" loop preload="auto">
+      <source src="./editable/assets/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button id="music-toggle-btn" type="button" aria-label="Toggle background music" title="Play / Pause Music">
+      <!-- Vinyl record icon when playing -->
+      <svg id="music-icon-playing" viewBox="0 0 24 24" style="display: none;">
+        <circle cx="12" cy="12" r="10" stroke="#e4c97e" stroke-width="1.8" fill="none" />
+        <circle cx="12" cy="12" r="4" stroke="#e4c97e" stroke-width="1.5" fill="none" />
+        <circle cx="12" cy="12" r="1.5" fill="#e4c97e" />
+      </svg>
+      <!-- Music note icon when paused -->
+      <svg id="music-icon-paused" viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+    </button>
+
+    <script>
+      (function() {
+        const audio = document.getElementById('wedding-music');
+        const btn = document.getElementById('music-toggle-btn');
+        const iconPlaying = document.getElementById('music-icon-playing');
+        const iconPaused = document.getElementById('music-icon-paused');
+        let isStarted = false;
+
+        function updateUI(isPlaying) {
+          if (isPlaying) {
+            btn.classList.add('playing');
+            iconPlaying.style.display = 'block';
+            iconPaused.style.display = 'none';
+          } else {
+            btn.classList.remove('playing');
+            iconPlaying.style.display = 'none';
+            iconPaused.style.display = 'block';
+          }
+        }
+
+        function tryPlay() {
+          if (!audio.paused) return;
+          audio.play().then(function() {
+            isStarted = true;
+            updateUI(true);
+          }).catch(function(e) {
+            console.log('Autoplay deferred until user interaction');
+          });
+        }
+
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (audio.paused) {
+            audio.play().then(function() {
+              isStarted = true;
+              updateUI(true);
+            });
+          } else {
+            audio.pause();
+            updateUI(false);
+          }
+        });
+
+        // Trigger playback on gate open button or any first user interaction
+        document.addEventListener('click', function handler() {
+          if (!isStarted) {
+            tryPlay();
+          }
+        }, { passive: true });
+
+        // Also attempt initial play
+        tryPlay();
+      })();
+    </script>
+  </body>
+</html>

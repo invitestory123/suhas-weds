@@ -71,7 +71,7 @@ window.WEDDING_DATA = {
 
   music: {
     src: "./editable/assets/music.mp3",
-    title: "Seetha Kalyana Vaibhogame (Agam)",
+    title: "Sound of Heaven (Sitar) — Rishab Sharma",
   },
 
   meta: {

@@ -43,18 +43,21 @@ window.WEDDING_DATA = {
       title: "The Journey Begins",
       text: "A serendipitous meeting, shared smiles, and the beginning of a beautiful bond filled with laughter and trust.",
       image: "story-1",
+      objectPosition: "center 20%",
     },
     {
       year: "2025",
       title: "A Promise Made",
       text: "Two souls discovering true companionship, countless conversations, and promises to walk hand in hand forever.",
       image: "story-2",
+      objectPosition: "center 18%",
     },
     {
       year: "2026",
       title: "The Wedding Celebration",
       text: "Surrounded by loved ones and blessed with love, we unite as one to embark on our lifelong journey.",
       image: "story-3",
+      objectPosition: "center center",
     },
   ],
 
@@ -82,6 +85,26 @@ window.WEDDING_DATA = {
     siteName: "Dhanya & Lavin Wedding",
   },
 
+  moments: [
+    {
+      src: "./editable/assets/moment-1.jpg",
+      alt: "Dhanya & Lavin wedding rings",
+    },
+    {
+      src: "./editable/assets/moment-2.jpg",
+      alt: "Dhanya & Lavin walking hand in hand",
+    },
+    {
+      src: "./editable/assets/moment-3.jpg",
+      alt: "Dhanya & Lavin embrace",
+      objectPosition: "35% center",
+    },
+    {
+      src: "./editable/assets/moment-4.jpg",
+      alt: "Dhanya & Lavin close-up portrait",
+    },
+  ],
+
   images: {
     gatePanel: "./editable/assets/gate-panel.jpg",
     heroArch: "./editable/assets/hero-arch.jpg",
@@ -91,5 +114,9 @@ window.WEDDING_DATA = {
     story1: "./editable/assets/story-1.jpg",
     story2: "./editable/assets/story-2.jpg",
     story3: "./editable/assets/story-3.jpg",
+    moment1: "./editable/assets/moment-1.jpg",
+    moment2: "./editable/assets/moment-2.jpg",
+    moment3: "./editable/assets/moment-3.jpg",
+    moment4: "./editable/assets/moment-4.jpg",
   },
 };

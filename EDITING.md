@@ -43,6 +43,7 @@ Edit `venue` in `editable/wedding-data.js`:
 ### Media & Artwork
 Files located in `editable/assets/`:
 - Gate panels & hero: `gate-panel.jpg`, `hero-arch.jpg`
+- Moments gallery: `moment-1.jpg`, `moment-2.jpg`, `moment-3.jpg`, `moment-4.jpg`
 - Story images: `story-1.jpg`, `story-2.jpg`, `story-3.jpg`
 - Decorative graphics: `lotus.png`, `footer-floral.jpg`, `map-preview.jpg`
 

@@ -101,7 +101,8 @@ window.WEDDING_DATA = {
     },
     {
       src: "./editable/assets/moment-4.jpg",
-      alt: "Dhanya & Lavin close-up portrait",
+      alt: "Dhanya & Lavin walking outdoors",
+      objectPosition: "center 20%",
     },
   ],
 

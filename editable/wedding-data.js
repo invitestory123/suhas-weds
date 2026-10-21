@@ -43,14 +43,14 @@ window.WEDDING_DATA = {
       title: "The Journey Begins",
       text: "A serendipitous meeting, shared smiles, and the beginning of a beautiful bond filled with laughter and trust.",
       image: "story-1",
-      objectPosition: "center 20%",
+      objectPosition: "center 38%",
     },
     {
       year: "2025",
       title: "A Promise Made",
       text: "Two souls discovering true companionship, countless conversations, and promises to walk hand in hand forever.",
       image: "story-2",
-      objectPosition: "center 18%",
+      objectPosition: "center 48%",
     },
     {
       year: "2026",

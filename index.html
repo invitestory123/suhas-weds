@@ -75,37 +75,47 @@
         letter-spacing: 0.28em !important;
         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
       }
-      /* Full unzoomed hero photo framing */
+      /* Full-bleed hero photo filling the first page */
       section.min-h-\[100svh\] div.absolute.-top-10.inset-x-0.bottom-0 {
-        bottom: auto !important;
-        top: 0 !important;
+        top: -2.5rem !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
         height: auto !important;
-        max-height: 50svh !important;
-        display: flex !important;
-        justify-content: center !important;
+        max-height: none !important;
+        display: block !important;
       }
       section.min-h-\[100svh\] img[alt*="Illustrated Mughal arch"],
       section.min-h-\[100svh\] img[src*="hero-arch"] {
         width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        max-height: 52svh !important;
-        object-fit: contain !important;
-        object-position: center top !important;
-        -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%) !important;
-        mask-image: linear-gradient(to bottom, black 82%, transparent 100%) !important;
+        max-width: none !important;
+        height: 100% !important;
+        max-height: none !important;
+        object-fit: cover !important;
+        object-position: center 12% !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform: translateZ(0);
       }
       section.min-h-\[100svh\] .bg-gradient-to-b.from-pine\/25 {
-        display: none !important;
+        display: block !important;
       }
       section.min-h-\[100svh\] .h-72.bg-gradient-to-t {
-        display: none !important;
+        display: block !important;
+        height: 24rem !important;
+        background: linear-gradient(
+          to top,
+          var(--parchment, #f6f3ee) 0%,
+          var(--parchment, #f6f3ee) 38%,
+          rgba(246, 243, 238, 0.94) 65%,
+          rgba(246, 243, 238, 0.6) 82%,
+          transparent 100%
+        ) !important;
       }
       section.min-h-\[100svh\] div.z-20 {
-        padding-top: 1.5rem !important;
+        padding-top: 5rem !important;
       }
       #music-toggle-btn {
         position: fixed;

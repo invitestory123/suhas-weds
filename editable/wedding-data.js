@@ -78,11 +78,11 @@ window.WEDDING_DATA = {
   },
 
   meta: {
-    title: "Dhanya & Lavin — Wedding Invitation",
+    title: "Dhanya weds Lavin — Wedding Invitation",
     description: "Dhanya and Lavin cordially invite you to celebrate their wedding on November 14 & 15, 2026 at Cauvery Hall, Madikeri, Karnataka.",
     url: "https://suhas-weds.vercel.app/",
     image: "./external/media.invitestory.in/sage-parchment/og-image.jpg",
-    siteName: "Dhanya & Lavin Wedding",
+    siteName: "Dhanya weds Lavin",
   },
 
   moments: [

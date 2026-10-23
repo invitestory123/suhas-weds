@@ -87,12 +87,14 @@
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        max-height: 50svh !important;
+        max-height: 52svh !important;
         object-fit: contain !important;
         object-position: center top !important;
         -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%) !important;
         mask-image: linear-gradient(to bottom, black 82%, transparent 100%) !important;
-        image-rendering: -webkit-optimize-contrast;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
       }
       section.min-h-\[100svh\] .bg-gradient-to-b.from-pine\/25 {
         display: none !important;
